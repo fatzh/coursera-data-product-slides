@@ -33,7 +33,7 @@
         <slide class="title-slide segue nobackground">
   <hgroup class="auto-fadein">
     <h1>Child height predictor</h1>
-    <h2>Predict the child height using historical data from Galton.</h2>
+    <h2>Predict a child height using historical data from Galton.</h2>
     <p>Fabrice Tereszkiewicz<br/></p>
   </hgroup>
   <article></article>  
@@ -46,7 +46,7 @@
     <h2>Introduction</h2>
   </hgroup>
   <article data-timings="">
-    <p>This presentation will show how the Galton historical data on children heights can be used to predict the height of a children based on the child gender and its parents heights.</p>
+    <p>This presentation will show how the Galton historical data on children heights can be used to predict the height of a child based on the child gender and its parents heights.</p>
 
 <h3>The Galton dataset</h3>
 
@@ -115,6 +115,10 @@ glimpse(df)
   </hgroup>
   <article data-timings="">
     <p>We will use a linear regression model based on the features we elicited on the previous slide.</p>
+
+<pre><code class="r">mdl.galton &lt;- lm(data=df, childHeight ~ .)
+summary(mdl.galton)$coefficients
+</code></pre>
 
 <pre><code>##               Estimate Std. Error  t value      Pr(&gt;|t|)
 ## (Intercept) 41.9639494 6.92709835  6.05794  1.999906e-09

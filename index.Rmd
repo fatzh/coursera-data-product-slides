@@ -1,6 +1,6 @@
 ---
 title       : Child height predictor
-subtitle    : Predict the child height using historical data from Galton.
+subtitle    : Predict a child height using historical data from Galton.
 author      : Fabrice Tereszkiewicz
 job         : 
 framework   : io2012     # {io2012, html5slides, shower, dzslides, ...}
@@ -14,7 +14,7 @@ knit        : slidify::knit2slides
 
 ## Introduction
 
-This presentation will show how the Galton historical data on children heights can be used to predict the height of a children based on the child gender and its parents heights.
+This presentation will show how the Galton historical data on children heights can be used to predict the height of a child based on the child gender and its parents heights.
 
 ### The Galton dataset
 
@@ -58,7 +58,7 @@ glimpse(df)
 
 We will use a linear regression model based on the features we elicited on the previous slide.
 
-```{r, echo=FALSE}
+```{r}
 mdl.galton <- lm(data=df, childHeight ~ .)
 summary(mdl.galton)$coefficients
 ```
